@@ -36,7 +36,6 @@ paths:
         schema:
           type: string
         in: path
-        required: true
     put:
       tags:
         - Categories
@@ -94,7 +93,6 @@ paths:
         schema:
           type: string
         in: path
-        required: true
     put:
       tags:
         - Articles
@@ -152,7 +150,6 @@ paths:
         schema:
           type: string
         in: path
-        required: true
     put:
       tags:
         - Tables
