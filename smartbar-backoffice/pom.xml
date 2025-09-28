@@ -130,7 +130,7 @@
             <plugin>
                 <groupId>org.openapitools</groupId>
                 <artifactId>openapi-generator-maven-plugin</artifactId>
-                <version>7.2.0</version>
+                <version>7.7.0</version>
                 <executions>
                     <execution>
                         <id>Generate JAX-RS server-api-stubs</id>
@@ -138,7 +138,8 @@
                             <goal>generate</goal>
                         </goals>
                         <configuration>
-                            <inputSpec>${project.basedir}/src/main/resources/openapi/backoffice-openapi.yaml</inputSpec>
+                           <!-- <inputSpec>${project.basedir}/src/main/resources/openapi/backoffice-openapi.yaml</inputSpec>-->
+                            <inputSpec>${project.baseUri}\src\main\resources\openapi\backoffice-openapi.yaml</inputSpec>
                             <generatorName>jaxrs-spec</generatorName>
                             <apiPackage>com.mazasoft.smartbar.backoffice.api</apiPackage>
                             <modelPackage>com.mazasoft.smartbar.backoffice.api.model</modelPackage>
@@ -148,6 +149,7 @@
                                 <useSwaggerAnnotations>false</useSwaggerAnnotations>
                                 <interfaceOnly>true</interfaceOnly>
                                 <returnResponse>true</returnResponse>
+                                <skipValidateSpec>true</skipValidateSpec>
                             </configOptions>
                         </configuration>
                     </execution>
